@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyPhotoshop.ParametrizedFilter" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Filters\ParametrizedFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyPhotoshop.PixelFilter" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filters\PixelFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyPhotoshop.LighteningFilter" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filters\LighteningFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyPhotoshop.GrayscaleFilter" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filters\GrayscaleFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
