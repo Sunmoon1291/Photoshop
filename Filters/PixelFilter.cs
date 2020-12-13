@@ -5,12 +5,12 @@ using System.Text;
 
 namespace MyPhotoshop
 {
-    public abstract class PixelFilter : ParametrizedFilter
-    {
-		public PixelFilter(IParametrs filter_parametrs) : base(filter_parametrs) { }
-		public abstract Pixel EditPixel(Pixel original, IParametrs parametrs);
+    public abstract class PixelFilter<TParameter> : ParametrizedFilter<TParameter>
+		where TParameter : IParametrs, new()
+	{
+		public abstract Pixel EditPixel(Pixel original, TParameter parametrs);
 
-		public override Photo Process(Photo original, IParametrs filter_parametrs)
+		public override Photo Process(Photo original, TParameter filter_parametrs)
 		{
 			var result = new Photo(original.width, original.height);
 
