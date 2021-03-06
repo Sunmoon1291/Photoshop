@@ -116,7 +116,7 @@ namespace MyPhotoshop
 				box.Width=50;
 				box.Height=20;
 				box.Value=(decimal)param.DefaultValue;
-				box.Increment=(decimal)param.Increment/3;
+				box.Increment=(decimal)param.Increment;
 				box.Maximum=(decimal)param.MaxValue;
 				box.Minimum=(decimal)param.MinValue;
                 box.DecimalPlaces = 2;
@@ -149,6 +149,16 @@ namespace MyPhotoshop
 			processed.Image=resultBmp;
 		}
 
-        
-	}
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // MainWindow
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "MainWindow";
+            this.ResumeLayout(false);
+
+        }
+    }
 }

@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MyPhotoshop
 {
-    public abstract class PixelFilter<TParameter> : ParametrizedFilter<TParameter>
+    public class PixelFilter<TParameter> : ParametrizedFilter<TParameter>
 		where TParameter : IParametrs, new()
 	{
-		public abstract Pixel EditPixel(Pixel original, TParameter parametrs);
+		string name;
+		Func<Pixel, TParameter, Pixel> processor;
+
+		public PixelFilter(string name, Func<Pixel, TParameter, Pixel> processor)
+        {
+			this.name = name;
+			this.processor = processor;
+        }
 
 		public override Photo Process(Photo original, TParameter filter_parametrs)
 		{
@@ -17,9 +21,14 @@ namespace MyPhotoshop
 			for (int x = 0; x < result.width; x++)
 				for (int y = 0; y < result.height; y++)
 				{
-					result[x, y] = EditPixel(original[x, y], filter_parametrs);
+					result[x, y] = processor(original[x, y], filter_parametrs);
 				}
 			return result;
+		}
+
+		public override string ToString()
+		{
+			return name;
 		}
 	}
 }
