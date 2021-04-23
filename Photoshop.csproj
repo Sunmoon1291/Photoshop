@@ -38,12 +38,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Pixel.cs" />
+    <Compile Include="Filters\Parameters\ExpressionParametersHandler.cs" />
+    <Compile Include="Filters\Parameters\IParametersHandler.cs" />
+    <Compile Include="Filters\Parameters\StaticParametersHandler.cs" />
+    <Compile Include="Filters\Parameters\SimpleParametersHandler.cs" />
     <Compile Include="Filters\TransformFilter\AngleParameter.cs" />
     <Compile Include="Filters\EmptyParametrs.cs" />
-    <Compile Include="Filters\IParametrs.cs" />
+    <Compile Include="Filters\Parameters\IParametrs.cs" />
     <Compile Include="Filters\LighteningParametrs.cs" />
-    <Compile Include="Filters\ParameterInfo.cs" />
-    <Compile Include="Filters\ParametrizedFilter.cs" />
+    <Compile Include="Filters\Parameters\ParameterInfo.cs" />
+    <Compile Include="Filters\Parameters\ParametrizedFilter.cs" />
     <Compile Include="Filters\PixelFilter.cs" />
     <Compile Include="Filters\TransformFilter\FreeTrancformers.cs" />
     <Compile Include="Filters\TransformFilter\ITrancformer.cs" />
